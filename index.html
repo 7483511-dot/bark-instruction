@@ -32,28 +32,28 @@ html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
 /* HERO */
-.hero{position:relative;height:min(100svh,67vw);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#1a2a10}
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#1a2a10}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center}
 
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,20,5,0.2) 0%,rgba(20,40,10,0.5) 45%,rgba(15,30,8,0.88) 100%)}
-.hero-content{position:relative;z-index:2;max-width:var(--max);margin:0 auto;width:100%;padding:40px var(--px) 64px;animation:fadeUp 0.7s ease-out 0.1s both}
+.hero-content{position:relative;z-index:2;max-width:var(--max);margin:0 auto;width:100%;padding:20px var(--px) 36px;animation:fadeUp 0.7s ease-out 0.1s both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 }
 .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px}
 .hero-line{width:32px;height:2px;background:var(--gold)}
 .hero-label{font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold)}
-.hero h1{font-size:clamp(28px,5.5vw,60px);font-weight:800;color:var(--white);line-height:1.12;margin-bottom:18px;letter-spacing:-0.025em;max-width:680px}
+.hero h1{font-size:clamp(24px,5.5vw,60px);font-weight:800;color:var(--white);line-height:1.15;margin-bottom:12px;letter-spacing:-0.025em;max-width:680px}
 .hero h1 em{font-style:normal;color:var(--gold2)}
-.hero-sub{font-size:clamp(14px,1.5vw,18px);color:rgba(255,255,255,0.7);line-height:1.65;margin-bottom:40px;max-width:500px}
-.hero-actions{display:flex;flex-direction:column;align-items:stretch;gap:12px}
+.hero-sub{font-size:clamp(13px,1.5vw,18px);color:rgba(255,255,255,0.7);line-height:1.6;margin-bottom:40px;max-width:500px}
+.hero-actions{display:flex;flex-direction:column;align-items:stretch;gap:10px;margin-bottom:20px}
 .btn-gold{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--gold);color:var(--dg);font-size:15px;font-weight:800;padding:16px 24px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;text-decoration:none}
 .btn-gold:hover{background:var(--gold2);transform:translateY(-1px)}
 .btn-gold:active{transform:scale(0.98)}
 .btn-ghost{display:flex;align-items:center;justify-content:center;gap:9px;background:transparent;color:rgba(255,255,255,0.8);font-size:14px;font-weight:600;padding:15px 24px;border-radius:8px;border:1.5px solid rgba(255,255,255,0.3);cursor:pointer;transition:all 0.2s;text-decoration:none}
 .btn-ghost:hover{border-color:rgba(255,255,255,0.6);color:#fff}
-.hero-stats{display:flex;flex-wrap:wrap;gap:16px 28px;margin-top:clamp(24px,4vw,56px);padding-top:clamp(20px,3vw,40px);border-top:1px solid rgba(255,255,255,0.15)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.15)}
 .hero-stat-num{font-size:clamp(20px,3vw,32px);font-weight:900;color:var(--gold2);line-height:1}
-.hero-stat-label{font-size:11px;color:rgba(255,255,255,0.5);margin-top:4px;line-height:1.4}
+.hero-stat-label{font-size:10px;color:rgba(255,255,255,0.5);margin-top:3px;line-height:1.4}
 
 /* CONTAINER */
 .section-inner{max-width:var(--max);margin:0 auto;padding:0 var(--px)}
@@ -224,7 +224,8 @@ footer{background:#151e0a;padding:clamp(40px,6vw,72px) 0}
 /* ANIM */
 .fade-up{transition:opacity 0.6s,transform 0.6s}
 /* ======================== DESKTOP ======================== */
-@media(min-width:768px){.hero-actions{flex-direction:row;align-items:center}.calc-input-wrap{flex-direction:row}.btn-calc{width:auto}.calc-input{width:auto;flex:1}
+@media(min-width:768px){.hero-content{padding:40px var(--px) 64px}.hero-stats{margin-top:clamp(24px,4vw,56px);padding-top:clamp(20px,3vw,40px);gap:16px 28px}
+.hero-actions{flex-direction:row;align-items:center}.calc-input-wrap{flex-direction:row}.btn-calc{width:auto}.calc-input{width:auto;flex:1}
 .hero{height:90svh}
 
   .nav-links{display:flex}
